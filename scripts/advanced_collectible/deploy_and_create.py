@@ -4,7 +4,7 @@ from scripts.helpful_scripts import (
     get_contract,
     fund_with_link,
 )
-from brownie import AdvancedCollectible, network, config
+from brownie import Cartel, network, config
 
 
 def deploy_and_create():
@@ -12,7 +12,7 @@ def deploy_and_create():
     # We want to be able to use the deployed contracts if we are on a testnet
     # Otherwise, we want to deploy some mocks and use those
     # Rinkeby
-    advanced_collectible = AdvancedCollectible.deploy(
+    advanced_collectible = Cartel.deploy(
         get_contract("vrf_coordinator"),
         get_contract("link_token"),
         config["networks"][network.show_active()]["keyhash"],

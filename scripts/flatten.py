@@ -1,4 +1,4 @@
-from brownie import AdvancedCollectible
+from brownie import Cartel
 
 
 def main():
@@ -6,8 +6,8 @@ def main():
 
 
 def flatten():
-    file = open("./AdvancedCollectible_flattened.sol", "w")
-    verification_information = AdvancedCollectible.get_verification_info()
+    file = open("./Cartel_flattened.sol", "w")
+    verification_information = Cartel.get_verification_info()
     flattened_code = (
         verification_information["flattened_source"]
         .replace("\\n", "\n")

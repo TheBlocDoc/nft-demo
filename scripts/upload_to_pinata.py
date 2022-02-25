@@ -5,7 +5,7 @@ import requests
 PINATA_BASE_URL = "https://api.pinata.cloud/"
 endpoint = "pinning/pinFileToIPFS"
 # Change this filepath
-filepath = "./img/pug.png"
+filepath = "./img/KINGPIN_1.png"
 filename = filepath.split("/")[-1:][0]
 headers = {
     "pinata_api_key": os.getenv("PINATA_API_KEY"),

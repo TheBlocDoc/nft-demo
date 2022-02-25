@@ -1,0 +1,11 @@
+{
+    "name": "KINGPIN",
+    "description": "A real ass nigga!",
+    "image": "https://ipfs.io/ipfs/QmcJHSgE819BwQBFAQSM134oSxgFWtoc14LP6khvPP1AYj?filename=KINGPIN_1.png",
+    "attributes": [
+        {
+            "trait_type": "Realness",
+            "value": 100
+        }
+    ]
+}

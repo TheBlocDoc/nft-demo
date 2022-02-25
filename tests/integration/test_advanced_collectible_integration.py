@@ -1,4 +1,4 @@
-from brownie import network, AdvancedCollectible
+from brownie import network, Cartel
 import time
 import pytest
 from scripts.helpful_scripts import (

@@ -1,12 +1,12 @@
 from scripts.helpful_scripts import get_account, OPENSEA_URL
-from brownie import SimpleCollectible
+from brownie import BasicCartel
 
-sample_token_uri = "https://ipfs.io/ipfs/Qmd9MCGtdVz2miNumBHDbvj8bigSgTwnr4SbyH6DNnpWdt?filename=0-PUG.json"
+sample_token_uri = "https://ipfs.io/ipfs/QmcJHSgE819BwQBFAQSM134oSxgFWtoc14LP6khvPP1AYj?filename=KINGPIN_1.png"
 
 
 def deploy_and_create():
     account = get_account()
-    simple_collectible = SimpleCollectible.deploy({"from": account})
+    simple_collectible = BasicCartel.deploy({"from": account})
     tx = simple_collectible.createCollectible(sample_token_uri, {"from": account})
     tx.wait(1)
     print(

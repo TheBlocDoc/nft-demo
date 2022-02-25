@@ -1,10 +1,10 @@
-from brownie import network, AdvancedCollectible
+from brownie import network, Cartel
 import pytest
 from scripts.helpful_scripts import (
     LOCAL_BLOCKCHAIN_ENVIRONMENTS,
     get_contract,
     get_account,
-    get_breed,
+    get_rank,
 )
 from scripts.advanced_collectible.deploy_and_create import deploy_and_create
 
@@ -25,11 +25,11 @@ def test_can_create_advanced_collectible():
     )
     # Assert
     assert advanced_collectible.tokenCounter() == 1
-    assert advanced_collectible.tokenIdToBreed(0) == random_number % 3
+    assert advanced_collectible.tokenIdToRank(0) == random_number % 3
 
 
-def test_get_breed():
+def test_get_rank():
     # Arrange / Act
-    breed = get_breed(0)
+    rank = get_rank(0)
     # Assert
-    assert breed == "PUG"
+    assert rank == "KINGPIN"
